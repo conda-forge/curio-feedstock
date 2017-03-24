@@ -1,6 +1,6 @@
 {% set name = "curio" %}
-{% set version = "0.4" %}
-{% set sha256 = "8e241a9d1958d85f53a2549fe948149abb43dbaac140f1cf2a9979856dc7c364" %}
+{% set version = "0.7" %}
+{% set sha256 = "95aa81842241848ccd93717d0a02a51d8c5623543944cea3c58a7ba757b0e436" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ source:
 build:
   number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
-  skip: True  # [win or not py35]
+  skip: True  # [win or not py>=35]
 
 requirements:
   build:
