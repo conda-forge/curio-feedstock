@@ -27,6 +27,7 @@ requirements:
 test:
   source_files:
     - tests
+    - examples
   requires:
     - pytest
   commands:
