@@ -31,7 +31,6 @@ test:
   requires:
     - pytest
   commands:
-    - ls -l
     - pytest
 
 about:
