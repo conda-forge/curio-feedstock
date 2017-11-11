@@ -1,6 +1,7 @@
 {% set name = "curio" %}
-{% set version = "0.4" %}
-{% set sha256 = "8e241a9d1958d85f53a2549fe948149abb43dbaac140f1cf2a9979856dc7c364" %}
+{% set version = "0.8" %}
+{% set hash_type = "sha256" %}
+{% set hash = "db370ae50a924a7f72b4d023a51443a870f64daa26b2c713b45a38e08fcf216f" %}
 
 package:
   name: {{ name|lower }}
@@ -8,13 +9,13 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: http://github.com/dabeaz/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  {{ hash_type }}: {{ hash }}
 
 build:
   number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
-  skip: True  # [win or not py35]
+  skip: True  # [win or (py < 35)]
 
 requirements:
   build:
@@ -24,10 +25,12 @@ requirements:
     - python
 
 test:
+  source_files:
+    - tests
   requires:
     - pytest
   commands:
-    - cd "${SRC_DIR}"
+    - ls -l
     - pytest
 
 about:
