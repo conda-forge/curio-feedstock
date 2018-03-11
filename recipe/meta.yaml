@@ -1,7 +1,7 @@
 {% set name = "curio" %}
-{% set version = "0.8" %}
+{% set version = "0.9" %}
 {% set hash_type = "sha256" %}
-{% set hash = "db370ae50a924a7f72b4d023a51443a870f64daa26b2c713b45a38e08fcf216f" %}
+{% set hash = "51d1a7b49b4f8dd1486ac785c72d522962e93ccfdcfc1f818f5c7553a307b5ef" %}
 
 package:
   name: {{ name|lower }}
