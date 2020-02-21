@@ -33,7 +33,7 @@ test:
   imports:
     - {{ name }}
   commands:
-    - pytest
+    - pytest --ignore tests/test_socket.py
 
 about:
   home: https://curio.readthedocs.org/
