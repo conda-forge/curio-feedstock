@@ -32,7 +32,7 @@ test:
   imports:
     - {{ name }}
   commands:
-    - pytest --ignore tests/test_socket.py
+    - pytest --ignore tests/test_socket.py --ignore tests/test_sync.py
 
 about:
   home: https://curio.readthedocs.org/
