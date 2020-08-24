@@ -5,7 +5,7 @@ Home: https://curio.readthedocs.org/
 
 Package license: BSD 3-clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: The coroutine concurrency library.
 
