@@ -1,6 +1,6 @@
 {% set name = "curio" %}
-{% set version = "1.4" %}
-{% set hash = "57edce81c837f3c2cf42fbb346dee26e537d1659e6605269fb13bd179e068744" %}
+{% set version = "1.6" %}
+{% set hash = "562a586db20216ba7d2be8263deb9eb079e56048f9b8906d11d5f45aa81c5247" %}
 
 package:
   name: {{ name|lower }}
@@ -17,7 +17,7 @@ build:
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
-  build:
+  host:
     - python >=3.6
     - pip
   run:
