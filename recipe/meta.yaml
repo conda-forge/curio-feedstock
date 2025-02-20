@@ -1,15 +1,13 @@
 {% set name = "curio" %}
 {% set version = "1.4" %}
-{% set hash = "57edce81c837f3c2cf42fbb346dee26e537d1659e6605269fb13bd179e068744" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ hash }}
+  sha256: 57edce81c837f3c2cf42fbb346dee26e537d1659e6605269fb13bd179e068744
 
 build:
   noarch: python
@@ -19,6 +17,7 @@ build:
 requirements:
   host:
     - python {{ python_min }}
+    - setuptools
     - pip
   run:
     - python >={{ python_min }}
@@ -34,6 +33,7 @@ test:
     - {{ name }}
   commands:
     - pytest --ignore tests/test_socket.py --ignore tests/test_sync.py
+    - pip check
 
 about:
   home: https://curio.readthedocs.org/
@@ -55,3 +55,4 @@ extra:
   recipe-maintainers:
     - scopatz
     - jochym
+    - synapticarbors
