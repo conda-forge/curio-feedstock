@@ -157,4 +157,5 @@ Feedstock Maintainers
 
 * [@jochym](https://github.com/jochym/)
 * [@scopatz](https://github.com/scopatz/)
+* [@synapticarbors](https://github.com/synapticarbors/)
 
